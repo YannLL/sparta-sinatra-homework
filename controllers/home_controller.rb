@@ -1,47 +1,47 @@
-class DoggosController < Sinatra::Base
+class HomeController < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
 
   #  Index
-  get '/doggos' do
+  get '/home' do
     "Index"
   end
 
   # New
-  get '/doggos/new' do
+  get '/home/new' do
     "New"
   end
 
   # Create
-  post "/doggos" do
+  post "/home" do
     "create"
   end
 
   # Show
-  get '/doggos/:id' do
+  get '/home/:id' do
     id = params[:id]
     "<h1>Show page for #{id}</h1>"
   end
 
   # Edit
-  get '/doggos/:id/edit' do
+  get '/home/:id/edit' do
     "edit"
   end
 
   # Update
-  put '/doggos/:id' do
+  put '/home/:id' do
     "Update #{ params[:id] }"
   end
 
   # Show
-  put '/doggos/:id' do
+  put '/home/:id' do
     id = params[:id]
     "<h1>Update params#{id}</h1>"
   end
 
   # Delete
-  delete '/doggos/:id' do
+  delete '/home/:id' do
     id = params[:id]
     "<h1>Destroy params#{id}</h1>"
   end
